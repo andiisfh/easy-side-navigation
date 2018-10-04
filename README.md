@@ -44,7 +44,7 @@ public class MainActivity extends EasySideNavigation {
 Setup all necessary function
 ```Java
 ...
-Toolbar mToolbar;
+    Toolbar mToolbar;
     
     // Set the main layout resource. It includes a toolbar
     @Override
