@@ -1,4 +1,7 @@
+<p align="center">
+EasySideNavigation
 ![Release](https://jitpack.io/v/andiisfh/easy-side-navigation.svg)
+</p>
 
 ## Requirements
 ---
@@ -7,9 +10,10 @@ Compile SDK Version 28
 Target SDK Version 28
 Build Tools Version 28.0.0
 ```
-## Steps
+## Gradle Dependency
 ---
-##### 1. Add it in your root build.gradle at the end of repositories:
+Step 1. Add the JitPack repository to your build file
+Add it in your root build.gradle at the end of repositories:
 ```
 allprojects {
 		repositories {
@@ -19,50 +23,58 @@ allprojects {
 	}
 ```
 
-##### 2. Add the dependency:
+Step 2. Add the dependency
+![Release](https://jitpack.io/v/andiisfh/easy-side-navigation.svg)
 ```
 dependencies {
-	        implementation 'com.github.andiisfh:easy-side-navigation:Tag'
+	        implementation 'com.github.andiisfh:easy-side-navigation:${version}'
 	}
 ```
 
-##### 3. Extends your Activity to EasySideNavigation:
-```
+## Usage
+Extends your Activity to EasySideNavigation
+```Java
 public class MainActivity extends EasySideNavigation {
 	...
 }
 ```
 
-##### 4. Setup all necessary function:
-```
+Setup all necessary function
+```Java
 ...
 Toolbar mToolbar;
     
+    // Set the main layout resource. It includes a toolbar
     @Override
     protected int setViewResource() {
         return R.layout.activity_main;
     }
-
+    
+    // Main layout has been inflated
     @Override
     protected void onViewReady(View view) {
         mToolbar = findViewById(R.id.toolbar);
     }
 
+    // Set the toolbar
     @Override
     protected Toolbar setToolbar() {
         return mToolbar;
     }
 
+    // Set the header navigation view layout resource
     @Override
     protected int setNavigationHeaderResource() {
         return R.layout.header_navigation_menu;
     }
 
+    // Set the navigation menu resource
     @Override
     protected int setNavigationMenu() {
         return R.menu.navigation_menu;
     }
 
+    // Listener when navigation item has been selected
     @Override
     protected void onNavigationItemSelected(MenuItem menuItem) {
 
@@ -70,5 +82,3 @@ Toolbar mToolbar;
 ...
 ```
 ### Done!
-
-### 
