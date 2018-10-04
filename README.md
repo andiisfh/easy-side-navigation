@@ -10,7 +10,8 @@ Target SDK Version 28
 Build Tools Version 28.0.0
 ```
 ## Gradle Dependency
-Step 1. Add the JitPack repository to your build file . 
+Step 1. Add the JitPack repository to your build file
+
 Add it in your root build.gradle at the end of repositories:
 ```
 allprojects {
@@ -21,7 +22,8 @@ allprojects {
 	}
 ```
 
-Step 2. Add the dependency . 
+Step 2. Add the dependency
+
 ![Release](https://jitpack.io/v/andiisfh/easy-side-navigation.svg)
 ```
 dependencies {
