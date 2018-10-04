@@ -1,4 +1,4 @@
-[![Release](https://jitpack.io/v/andiisfh/easy-side-navigation.svg)]
+![Release](https://jitpack.io/v/andiisfh/easy-side-navigation.svg)
 (https://jitpack.io/#andiisfh/easy-side-navigation)
 
 ### Requirements
