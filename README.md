@@ -29,7 +29,7 @@ Step 2. Add the dependency
 ![Release](https://jitpack.io/v/andiisfh/easy-side-navigation.svg)
 ```
 dependencies {
-        compile 'com.github.derohimat:android-base-mvp:1.0'
+        implementation 'com.github.andiisfh:easy-side-navigation:${version}'
 }
 ```
 
