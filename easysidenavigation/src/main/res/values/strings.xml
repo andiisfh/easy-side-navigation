@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">EasySideNavigation</string>
+    <string name="home_drawer_open">Drawer is Open</string> <!-- Drawer toggle state purpose only -->
+    <string name="home_drawer_close">Drawer is Close</string> <!-- Drawer toggle state purpose only -->
+</resources>
