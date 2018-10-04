@@ -1,7 +1,7 @@
-<p align="center">
-# EasySideNavigation . 
+
+# EasySideNavigation
+
 ![Release](https://jitpack.io/v/andiisfh/easy-side-navigation.svg)
-</p>
 
 ## Requirements
 ```
