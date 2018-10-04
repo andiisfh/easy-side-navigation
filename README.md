@@ -3,6 +3,8 @@
 
 ![Release](https://jitpack.io/v/andiisfh/easy-side-navigation.svg)
 
+
+
 ## Requirements
 ```
 Compile SDK Version 28
