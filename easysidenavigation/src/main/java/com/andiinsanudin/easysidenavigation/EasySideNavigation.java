@@ -37,6 +37,9 @@ public abstract class EasySideNavigation extends AppCompatActivity  {
         drawerLayout.addDrawerListener(mDrawerToggle);
 
         navigationView.inflateHeaderView(setNavigationHeaderResource());
+
+        getNavigationHeaderResource(navigationView.getHeaderView(0));
+
         navigationView.inflateMenu(setNavigationMenu());
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -52,6 +55,7 @@ public abstract class EasySideNavigation extends AppCompatActivity  {
     protected abstract void onViewReady(View view);
     protected abstract Toolbar setToolbar();
     protected abstract int setNavigationHeaderResource();
+    protected abstract void getNavigationHeaderResource(View view);
     protected abstract int setNavigationMenu();
     protected abstract void onNavigationItemSelected(MenuItem menuItem);
 
