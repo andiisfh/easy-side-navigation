@@ -76,7 +76,7 @@ Setup all necessary function
         return R.menu.navigation_menu;
     }
 
-    // Get all navigation component, both of menu & the header view
+    // Get all navigation component, the of menu & the header view
     @Override
     protected void getNavigationComponent(Menu menu, View headerView) {
         MenuItem nav_notification = menu.findItem(R.id.action_notification);
