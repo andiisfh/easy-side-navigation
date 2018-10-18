@@ -48,7 +48,7 @@ Setup all necessary function
     
     // Set the main layout resource. It includes a toolbar
     @Override
-    protected int setViewResource() {
+    protected int setLayoutResource() {
         return R.layout.activity_main;
     }
     
@@ -63,11 +63,11 @@ Setup all necessary function
     protected Toolbar setToolbar() {
         return mToolbar;
     }
-
+    
     // Set the header navigation view layout resource
     @Override
     protected int setNavigationHeaderResource() {
-        return R.layout.header_navigation_menu;
+        return R.menu.header_navigation_menu;
     }
 
     // Set the navigation menu resource
@@ -76,6 +76,22 @@ Setup all necessary function
         return R.menu.navigation_menu;
     }
 
+    // Get all navigation component, both of menu & the header view
+    @Override
+    protected void getNavigationComponent(Menu menu, View headerView) {
+        MenuItem nav_notification = menu.findItem(R.id.action_notification);
+
+        nav_notification.setTitle("NewTitleForNotification");
+
+        final TextView tvName = headerView.findViewById(R.id.tv_name);
+        tvName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, tvName.getText().toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+    
     // Listener when navigation item has been selected
     @Override
     protected void onNavigationItemSelected(MenuItem menuItem) {
