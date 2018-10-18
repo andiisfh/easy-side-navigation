@@ -9,6 +9,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewStub;
@@ -26,7 +27,7 @@ public abstract class EasySideNavigation extends AppCompatActivity  {
         setContentView(R.layout.activity_easysidenavigation);
 
         ViewStub stub = findViewById(R.id.viewStub);
-        stub.setLayoutResource(setViewResource());
+        stub.setLayoutResource(setLayoutResource());
         View view = stub.inflate();
         onViewReady(view);
 
@@ -38,9 +39,9 @@ public abstract class EasySideNavigation extends AppCompatActivity  {
 
         navigationView.inflateHeaderView(setNavigationHeaderResource());
 
-        getNavigationHeaderResource(navigationView.getHeaderView(0));
-
         navigationView.inflateMenu(setNavigationMenu());
+
+        getNavigationComponent(navigationView.getMenu(), navigationView.getHeaderView(0));
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -51,12 +52,12 @@ public abstract class EasySideNavigation extends AppCompatActivity  {
         });
     }
 
-    protected abstract int setViewResource();
+    protected abstract int setLayoutResource();
     protected abstract void onViewReady(View view);
     protected abstract Toolbar setToolbar();
     protected abstract int setNavigationHeaderResource();
-    protected abstract void getNavigationHeaderResource(View view);
     protected abstract int setNavigationMenu();
+    protected abstract void getNavigationComponent(Menu menu, View headerView);
     protected abstract void onNavigationItemSelected(MenuItem menuItem);
 
     private ActionBarDrawerToggle setupDrawerToggle(DrawerLayout drawerLayout, Toolbar toolbar){
