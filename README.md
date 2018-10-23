@@ -103,5 +103,5 @@ Setup all necessary function
 
 ## License
 ```
-this repository is licensed under an [Apache License 2.0](https://github.com/andiisfh/easy-side-navigation/blob/master/LICENSE).
+[Apache License 2.0](https://github.com/andiisfh/easy-side-navigation/blob/master/LICENSE)
 ```
