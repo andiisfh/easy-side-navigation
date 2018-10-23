@@ -102,6 +102,4 @@ Setup all necessary function
 ### Done!
 
 ## License
-```
 [Apache License 2.0](https://github.com/andiisfh/easy-side-navigation/blob/master/LICENSE)
-```
